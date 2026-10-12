@@ -1,0 +1,51 @@
+{
+  "name_he": "דנה חן",
+  "name_en": "DANA CHEN",
+  "descriptor_he": "קליניקה לקוסמטיקה מתקדמת",
+  "descriptor_en": "Advanced Cosmetic Clinic",
+  "city_he": "נתניה",
+  "language": "he",
+  "direction": "rtl",
+  "whatsapp_number": "972522547575",
+  "whatsapp_url": "https://wa.me/972522547575",
+  "cta_he": "וואטסאפ בביו",
+  "phone_display": "052-254-7575",
+  "site_url": "https://danachenclinic.replit.app",
+  "palette": {
+    "cream": "#FAF8F5",
+    "ivory": "#F3EEE6",
+    "ink": "#2B2620",
+    "gold": "#C9A96A",
+    "noir": "#1E1915"
+  },
+  "fonts": {
+    "display_latin": "Playfair Display",
+    "display_he": "Frank Ruhl Libre",
+    "body_he": "Heebo"
+  },
+  "voice": [
+    "יוקרתי, שקט, מינימליסטי. אדיטוריאל, לא פלאייר.",
+    "שפה חווייתית וקוסמטית בלבד: תחושה, מרקם, טקס טיפוח.",
+    "המוצר הוא הגיבור, מוקף מרחב שלילי נדיב.",
+    "בלי רשימות פיצ'רים, בלי צבע חזק לכל מוצר."
+  ],
+  "visual": {
+    "backdrop_prompt": "cream beige seamless backdrop, soft diffused window light, premium spa aesthetic, subtle warm shadows, editorial still life, generous negative space",
+    "negative_prompt": "text, letters, watermark, logo, people, person, face, hands, clutter, harsh shadows, neon colors"
+  },
+  "reel": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "duration_seconds": 24,
+    "caption_zone": "bottom_third",
+    "modes": ["hybrid", "product", "typographic"]
+  },
+  "monitor_queries": [
+    "קליניקה לקוסמטיקה מתקדמת בנתניה",
+    "קוסמטיקאית מומלצת בנתניה",
+    "Dana Chen cosmetic clinic Netanya",
+    "מוצרי טיפוח של דנה חן"
+  ],
+  "mention_pattern": "דנה\\s*חן|dana\\s*chen|danachen"
+}
