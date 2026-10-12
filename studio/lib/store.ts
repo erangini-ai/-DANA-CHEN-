@@ -43,8 +43,12 @@ export async function hGet<T>(key: string, id: string): Promise<T | null> {
 }
 
 export async function hAll<T extends { createdAt?: string }>(key: string): Promise<T[]> {
-  const raw = (await redis().hgetall<Record<string, string>>(key)) ?? {};
-  return Object.values(raw)
+  // With automaticDeserialization: false, HGETALL comes back as the raw flat [field, value, ...] array.
+  const raw = (await redis().hgetall(key)) as unknown;
+  const values: string[] = Array.isArray(raw)
+    ? raw.filter((_, i) => i % 2 === 1).map(String)
+    : Object.values((raw ?? {}) as Record<string, string>);
+  return values
     .map((v) => JSON.parse(v) as T)
     .sort((a, b) => (b.createdAt ?? "").localeCompare(a.createdAt ?? ""));
 }

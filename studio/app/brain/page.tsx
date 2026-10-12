@@ -72,10 +72,10 @@ export default function Brain() {
                   <td>
                     {p.name}
                     <div className="muted">{p.slug}{p.gate.spfRequired ? " · דורש SPF" : ""}</div>
+                    {!p.gate.allowed && <div className="muted" style={{ color: "var(--block)" }}>{p.gate.reasons.join(" ")}</div>}
                   </td>
                   <td>{p.copy_status || "—"}</td>
                   <td>{p.gate.allowed ? <span className="pill GO">פתוח</span> : <span className="pill BLOCK" title={p.gate.reasons.join("\n")}>חסום</span>}
-                    {!p.gate.allowed && <div className="muted">{p.gate.reasons.join(" ")}</div>}
                   </td>
                 </tr>
               ))}

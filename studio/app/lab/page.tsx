@@ -77,7 +77,7 @@ export default function Lab() {
       const creativeConf =
         ["strategist", "headliner", "scriptwriter", "art_director", "caption_writer"].reduce((s, k) => s + stages[k].confidence, 0) / 5;
 
-      // 2. Loop Engineering: audit → officer → critic → (reviser) until GO or MAX_LOOPS
+      // 2. Loop Engineering: audit ← officer ← critic ← (reviser) until GO or MAX_LOOPS
       let loops = 0;
       let officerIssues: OfficerIssue[] = [];
       let confidence = 0;
@@ -133,7 +133,7 @@ export default function Lab() {
 
   return (
     <>
-      <Head title="מעבדת תוכן" sub="אסטרטגית → כותרות → תסריט → ויז'ואל → כיתוב → רגולציה → עורכת, בלולאה עד GO." />
+      <Head title="מעבדת תוכן" sub="אסטרטגית ← כותרות ← תסריט ← ויז'ואל ← כיתוב ← רגולציה ← עורכת, בלולאה עד GO." />
       <ErrorBox error={pErr} />
 
       <section className="card stack">

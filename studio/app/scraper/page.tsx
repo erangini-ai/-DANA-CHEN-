@@ -28,7 +28,7 @@ export default function Scraper() {
 
   return (
     <>
-      <Head title="סורק השראה" sub="עמוד של מתחרה או השראה → תובנות שנשמרות במוח המרכזי ומוזנות לסוכנים." />
+      <Head title="סורק השראה" sub="עמוד של מתחרה או השראה ← תובנות שנשמרות במוח המרכזי ומוזנות לסוכנים." />
       <section className="card stack">
         <input type="url" inputMode="url" placeholder="https://" value={url} onChange={(e) => setUrl(e.target.value)} dir="ltr" />
         <button onClick={go} disabled={busy || !url}>{busy ? "סורק…" : "סרוק ונתח"}</button>
